@@ -1,0 +1,25 @@
+<!--pages/ register/ register.wxml-->
+<!---->
+<view class="main">
+  <image class='background' src="../../image/bglogin.jpg" mode="aspectFill"></image>
+  <view class="input-from">
+    <view class="username">
+      <image class="nameImage" src="../../image/name.png"></image>
+      <input class="input" placeholder="请输入用户名" type="text" bindinput="usernameinput"/>      
+    </view>
+
+    <view class="username">
+      <image class="keyImage" src="../../image/key.png"></image>
+      <input class="input" placeholder="请输入密码" type="password" bindinput="passwordinput"/>
+    </view>
+
+    <view class="passwordconfirm">
+      <image class="keyImage" src="../../image/blank.png"></image>
+      <input class="input" placeholder="请再次确认密码" value="" type="password" bindinput="passwordconfirminput" />
+    </view>
+
+    <view class="signinBtnView">
+      <button class="signinBtn" type="submit" catchtap="signin">注   册</button>
+    </view>
+  </view>
+</view>

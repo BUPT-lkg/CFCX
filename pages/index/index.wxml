@@ -1,0 +1,73 @@
+<!--index.wxml-->
+<map
+  style="width: 100vw; height: 100vh;"
+  latitude="{{latitude}}"
+  longitude="{{longitude}}"
+  scale="16"
+>
+  <cover-view class="cover-view">
+    <cover-view class="container">
+      <cover-view class="flex-wrp" style="flex-direction:row;" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="unique">
+        <cover-view class="flex-item demo-text-{{index-1+2}}">
+          <cover-view class="txt">{{item.place_name}}</cover-view>
+          <cover-view class="txt1">当前人数：{{item.cur_num}}</cover-view>
+          <cover-view class="txt1">预约人数：{{item.app_num}}</cover-view>
+          <cover-view class="txt1">拥挤度：{{item.degree}}</cover-view>
+        </cover-view>
+      </cover-view>
+    </cover-view>
+  </cover-view>
+</map>
+<view class="btview"  >
+  <button class="bt" plain="ture" bindtap="getplan">规 划</button>
+  <button class="bt" plain="ture" bindtap="getBook">预 约</button>
+</view>
+<!--index.wxml
+<view class="content">
+	<image class='background' src="{{mapbgd}}" mode="aspectFill"></image>
+    <view class="flex-row">
+    <view wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="unique">
+      <view class="txt">当前人数：{{item.cur_num}}</view>
+      <view class="txt">预约人数：{{item.app_num}}</view>
+      <view class="txt">拥挤度：{{item.degree}}</view>
+    </view>
+  </view>
+  <view class="flex-row" >
+    <view wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="unique">
+      <button class="bttxt">{{item.place_name}}</button>
+    </view>
+  </view>
+</view>
+<button class="bttxt" bindtap="getBook">预约</button>
+<view class="flex-column" >
+  <view class="flex-item demo-text-1"></view>
+  <view class="flex-item demo-text-2"></view>
+  <view class="flex-item demo-text-3"></view>
+</view>
+
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-gap">
+      <map
+        style="width: 100%; height: 300px;"
+        latitude="{{latitude}}"
+        longitude="{{longitude}}"
+      >
+        <cover-view class="cover-view">
+          <cover-view class="container">
+            <cover-view class="flex-wrp" style="flex-direction:row;">
+              <cover-view class="flex-item demo-text-1"></cover-view>
+              <cover-view class="flex-item demo-text-2"></cover-view>
+              <cover-view class="flex-item demo-text-3"></cover-view>
+            </cover-view>
+          </cover-view>
+        </cover-view>
+      </map>
+    </view>
+  </view>
+</view>
+
+
+
+
+-->

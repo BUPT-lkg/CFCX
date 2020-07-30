@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/register/register",
+    "pages/index/index",
+    "pages/userinfo/userinfo",
+    "pages/book/book",
+    "pages/book/confirm",
+    "pages/book/history",
+    "pages/forum/forum",
+    "pages/plan/plan",
+    "pages/forum/forum-item/forum-item-template"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于验证你当前是否已履行预约到达指定地点"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "错峰出行.校园版",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/1.jpg",
+        "selectedIconPath": "image/1.jpg",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/forum/forum",
+        "iconPath": "image/2.jpg",
+        "selectedIconPath": "image/2.jpg",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/userinfo/userinfo",
+        "iconPath": "image/3.jpg",
+        "selectedIconPath": "image/3.jpg",
+        "text": ""
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap87.json"
+}

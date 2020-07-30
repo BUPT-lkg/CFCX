@@ -1,0 +1,43 @@
+<!--pages/book/confirm.wxml-->
+<view style="display:flex; flex-direction:column;">
+
+  <view style="display:flex; flex-direction:row; height: 30px">
+    <view class="text1" style=" width: 34%; ">日期</view>    
+    <view class="text1" style=" width: 33%; ">时间</view>
+    <view class="text1" style=" width: 33%; ">地点</view>
+  </view>
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 200px;" value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{list}}" style="flex-direction:row;" wx:for-index="index" wx:for-item="item" wx:key="unique" style="line-height: 50px">
+          <text space="emsp" > {{item.app_date}}  {{item.app_time}}   {{place[item.place_id-1]}}</text>   
+        </view>
+      </picker-view-column>
+    </picker-view>
+      <view class="BtnView">
+        <button class="confirmBtn" bindtap="confirm" style=" width: 45%; ">验证预约</button>
+        <button class="cancelBtn" bindtap="cancel" style=" width: 45%; ">取消预约</button>
+      </view>
+  <view style="height: 50px;" style="width: 100%; height: 180px; display:flex; flex-direction:row;">
+    <view style="width: 20%; height: 60px;">
+      <image style="width: 100%; height: 60px;" src="../../image/tips.png"></image>
+    </view>
+    <view class="box"> 
+      <view style="  margin: 25rpx 20rpx 0rpx 30rpx ; ">温馨提示：请在预约时间前30分钟内到指定地点进行预约验证，如到预约时间您仍未验证系统将自动扣除您的信用（信用值-1）。若您行程有变，可取消预约。</view>
+    </view>
+  </view>
+</view>
+
+<!--垂直滚动，这里必须设置高度
+<text  style="width: 35%;">{{item.app_date}}</text>
+        <text style="width: 35%;">{{item.app_time}}</text>
+        <text  style="width: 30%;">{{place[item.place_id-1]}}</text>    
+<scroll-view scroll-y="true" style="height: 360px"  bindtap="touch" data_id="{{id}}">
+    <view style="display:flex; flex-direction:row; height: 60px" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="unique">
+      <view class="text1" style=" width: 30%; ">{{item.app_date}}</view>    
+      <view class="text2" style=" width: 20%; ">{{item.app_time}}</view>
+      <view class="text3" style=" width: 20%; ">{{place[item.place_id-1]}}</view>
+      <button class='save' style=" width: 20%; ">验证</button>
+      <button class='save' style=" width: 20%; ">取消</button>
+    </view>
+</scroll-view>
+-->

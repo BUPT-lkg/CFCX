@@ -1,0 +1,49 @@
+<!--pages/book/book.wxml-->
+<view class='containt'>
+  <scroll-view class="scroll-view_H" scroll-x>
+    <view class='list'>
+      <view bindtap="selectDay" wx:for="{{ calendar }}" wx:for-item="item" wx:for-index="index" data-index="{{ index }}" class='listItem {{index==currentIndex? "current":""}}' wx:key="unique" data-date="{{ item.date}}">
+        <text class='name'>{{ item.week }}</text>
+        <text class='date'>{{ item.date }}</text>
+      </view>
+    </view>
+  </scroll-view>
+<view style="display:flex; flex-direction:row; height: 30px">
+  <view class="text1" style=" width: 40%; ">时间</view>    
+  <view class="text2" style=" width: 30%; ">预约</view>
+  <view class="text3" style=" width: 30%; ">预测</view>
+</view>
+  <!--垂直滚动，这里必须设置高度-->
+<scroll-view scroll-y="true" style="height: 53vh">
+    <view style="display:flex; flex-direction:row; height: 4vh" wx:for="{{listshow}}" wx:for-index="index" wx:for-item="item" wx:key="unique">
+      <view class="text1" style=" width: 40%; ">{{item.app_time}}</view>    
+      <view class="text2" style=" width: 30%; ">{{item.count}}</view>
+      <view class="text3" style=" width: 30%; ">{{item.predict}}</view>
+    </view>
+</scroll-view>
+<!--  white-space
+  normal: 正常无变化(默认处理方式.文本自动处理换行.假如抵达容器边界内容会转到下一行)
+  pre: 保持HTML源代码的空格与换行,等同与pre标签
+  nowrap: 强制文本在一行,除非遇到br换行标签
+  pre-wrap: 同pre属性,但是遇到超出容器范围的时候会自动换行
+  pre-line: 同pre属性,但是遇到连续空格会被看作一个空格
+  inherit: 继承
+-->
+  <view class="section" >  
+  <picker bindchange="bindPickerChange" value="{{place}}" range="{{objectArray}}" mode = "selector">  
+    <view class="picker">  
+      选择地点：{{objectArray[place]}}  
+    </view>  
+  </picker>  
+</view>  
+<view class="section">  
+  <picker mode="time" value="{{time}}" start="{{tstart}}" end="{{tend}}" bindchange="bindTimeChange">  
+    <view class="picker">  
+     选择时间 : {{times}}
+    </view>  
+  </picker>  
+</view>  
+  <view class='saveview'>
+   <button class='save' bindtap="sendCmd">确定预约</button>
+  </view>
+</view>

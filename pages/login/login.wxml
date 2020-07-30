@@ -1,0 +1,71 @@
+<!--pages/login/login.wxml-->
+<!---->
+<view class="main">
+  <image class='background' src="../../image/bglogin.jpg" mode="aspectFill"></image>
+
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </block>
+  </view>
+
+  <view class="input-from">
+    <view class="doc-title zan-hairline--bottom"></view>
+      <view class="username">
+      <image class="nameImage" src="../../image/name.png"></image>
+      <input class="input" placeholder="用户名" type="text" bindinput="usernameinput"/>      
+    </view>
+    
+    <view class="password">
+      <image class="keyImage" src="../../image/key.png"></image>
+      <input class="input" placeholder="密码"  type="password" bindinput="passwordinput"/>    
+    </view>
+
+    <view class="loginBtnView">
+      <button class="signinBtn" type="submit" catchtap="register">注  册</button>
+      <button class="loginBtn" type="submit" catchtap="login">登  录</button>
+    </view>
+  </view>
+</view>
+ <!--
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}{{userInfo.}}</text>
+    </block>
+  </view>
+ </view>
+<view class='header'>
+    <text>学生评教系统</text>
+  </view>
+  <form bindsubmit="formSubmit">
+ 
+    <view class='section'>
+      <text>学号：</text>
+      <input type='number' placeholder='请输入学号' name="no" value='1635050238'/>
+    </view>
+  
+    <view class='section'>
+      <text>密码:</text>
+      <input password='true' placeholder='请输入密码' name="pwd" value='123456'/>
+    </view>
+    <view class='button'>
+      <button type='primary' form-type='submit'>登录</button>
+      <button bindtap="register">注册</button>
+    </view>
+  </form>
+    <view class='fpwd' bindtap='findpwd'>
+      <text>忘记密码</text>
+    </view>
+
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view class="confirm">
+  <button bindtap="main"class="btn1" >确认登录</button>
+</view>
+-->
+

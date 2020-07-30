@@ -1,0 +1,14 @@
+<!--pages/book/history.wxml-->
+<view style="display:flex; flex-direction:row; height: 30px">
+  <view class="text1" style=" width: 50%; ">日期</view>    
+  <view class="text2" style=" width: 25%; ">时间</view>
+  <view class="text3" style=" width: 25%; ">地点</view>
+</view>
+<!--垂直滚动，这里必须设置高度-->
+<scroll-view scroll-y="true" style="height: 360px">
+    <view style="display:flex; flex-direction:row; height: 60px" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="unique">
+      <view class="text1" style=" width: 50%; ">{{item.app_date}}</view>    
+      <view class="text2" style=" width: 25%; ">{{item.app_time}}</view>
+      <view class="text3" style=" width: 25%; ">{{place[item.place_id-1]}}</view>
+    </view>
+</scroll-view>

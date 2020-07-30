@@ -1,0 +1,65 @@
+/* pages/ register/ register.wxss */
+page{
+  height:100%;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+}
+
+.input-from {
+  margin-top: 70%;
+  flex: auto;
+  height:100%;
+}
+
+.nameImage{
+  width: 8vw;
+  height: 8vw;
+  margin: 2vw 3vw 2vw 3vw ; /** 上 右 下 左 **/
+}
+
+.keyImage {
+  width: 8vw;
+  height: 8vw;
+  margin: 2vw 3vw 2vw 3vw ; /** 上 右 下 左 **/
+}
+.username,.password,.passwordconfirm{
+  border: 1px solid rgb(114, 139, 110);
+  border-radius: 50rpx;
+  width: 80vw;
+  height: 9vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 3vh 10vw 3vh 10vw ; /** 上 右 下 左 **/
+}
+.input{
+  height: 9vh;
+  font-size: 4vh;
+}
+.main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signinBtnView {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.signinBtn{
+  width: 80vw;
+  height: 7vh;
+  line-height: 7vh;
+  margin-top: 3vh;
+  font-size: 4vh;
+  color: #fff;
+  background-color:#95d4b7;
+  border: 0.1rpx solid #ccc;
+  border-radius: 40rpx;
+}

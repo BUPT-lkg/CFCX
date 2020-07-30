@@ -1,0 +1,73 @@
+/* pages/book/book.wxss */
+/* pages/orderTime/index.wxss */
+scroll-view{
+  height: 12vh;
+  width: 100%;
+}
+scroll-view .list{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+scroll-view .listItem{
+  text-align: center;
+  width: 50%; /*186rpx;*/
+  height: 12vh;
+  background-color: #f1f2f6;
+  padding-top: 0vh;
+  box-sizing: border-box;
+  /* float: left; */
+  display: inline-block;
+}
+scroll-view .listItem text{
+  display: block;
+}
+scroll-view .listItem .name{
+  font-size: 3vh;
+}
+scroll-view .listItem .date{
+  font-size: 3vh;
+}
+scroll-view .current{
+  background-color: #76aef8;
+ 
+}
+scroll-view .current text{
+  color: #fff;
+}
+.text1 {
+  background: rgba(193, 193, 197, 0.7);
+  text-align: center;
+}
+
+.text2 {
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+.text3 {
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.text4 {
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+.section{
+  background:#CABBC7;
+  margin:2vh;
+  padding:2vh;
+  height:4vh;
+}
+.saveview{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+.save{
+  width: 100%;
+  height: 10vh;
+  font-size: 4vh;
+}

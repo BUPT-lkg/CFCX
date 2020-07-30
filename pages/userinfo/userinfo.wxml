@@ -1,0 +1,36 @@
+<!--pages/userinfo/userinfo.wxml-->
+
+<view class="avatar-wrapper">
+  <view class="userinfo">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{username}}</text>
+    <text class="userinfo-nickname">{{"信用值："}}{{usercredit}}</text>
+  </view>
+  <view class="text">
+    <text wx:if="{{userSign==2}}">{{"您还没有填写真实信息，暂不能借书"}}</text>
+    <text wx:elif="{{userSign==1}}">{{"会员用户"}}</text>
+  </view>
+</view>
+
+<block wx:for="{{menuitems}}" wx:key="menu_for">
+  <navigator url="{{item.url}}"hover-class="navigator-hover">
+    <view class="item-row">
+      <image class="item-image"src="{{item.icon}}"></image>
+      <view class="item-text">{{item.text}}</view>
+      <image class="item-image"src="{{item.tips}}"></image>
+    </view>
+    <view class="line"></view>
+  </navigator>
+</block>
+
+  <button class="bt" bindtap="logout">退出登录</button>
+
+
+
+    <!--<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{username}}</text>
+      <text class="userinfo-nickname">{{"信用值："}}{{usercredit}}</text>
+    </block>
+    -->

@@ -1,0 +1,19 @@
+/* pages/book/history.wxss */
+.text1 {
+  background: rgba(193, 193, 197, 0.7);
+  text-align: center;
+}
+
+.text2 {
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+.text3 {
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.text4 {
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}

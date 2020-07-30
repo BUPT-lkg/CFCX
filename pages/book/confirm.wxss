@@ -1,0 +1,45 @@
+/* pages/book/confirm.wxss  rgba(193, 193, 197, 0.7)*/
+
+.text1 {
+  background: rgba(146, 156, 126, 0.7);
+  text-align: center;
+  border: 0.5rpx solid rgb(255, 255, 255);
+}
+
+.BtnView {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  padding-bottom: 0px;
+}
+.confirmBtn{
+  width: 45%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 25px;
+  color: #fff;
+  background-color:#95d4b7;
+  border: 0.1rpx solid #ccc;
+  border-radius: 40rpx;
+}
+
+.cancelBtn{
+  width: 45%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 25px;
+  color: #fff;
+  background-color:#d49595;
+  border: 0.1rpx solid #ccc;
+  border-radius: 40rpx;
+}
+.box{
+  width: 75%;
+  height:150px;
+  margin-top: 5px;
+  color: #fff;
+  background-color:#8f987f6d;
+  border: 0.1rpx solid #ccc;
+  border-radius: 40rpx;
+}
